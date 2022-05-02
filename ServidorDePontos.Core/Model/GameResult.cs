@@ -1,21 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ServidorDePontos.Core.Interfaces;
 
 namespace ServidorDePontos.Core.Model
 {
-    public class GameResult
+    public class GameResult : IIdentityEntity
     {
-        public GameResult(int playerId, int gameId, int win, DateTime timestamp)
-        {
-            PlayerId = playerId;
-            GameId = gameId;
-            Win = win;
-            Timestamp = timestamp;
-        }
-
+        public int Id { get; set; }
         public long PlayerId { get; set; }
         public long GameId { get; set; }
         public long Win { get; set; }
